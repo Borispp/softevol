@@ -1,0 +1,43 @@
+{
+  "name": "fabium",
+  "version": "0.0.1",
+  "description": "front-end boilerplate for fast project start",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-util": "*",
+    "imagemin-pngcrush": "^1.0.0",
+    "js-yaml": "^3.2.2",
+    "gulp-imagemin": "*",
+    "gulp-minify-css": "^0.3.10",
+    "gulp-uglify": "*",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-coffee": "*",
+    "gulp-jade": "*",
+    "gulp-plumber": "*",
+    "gulp-stylus": "*",
+    "gulp.spritesmith": "*",
+    "gulp-load-plugins": "^0.7.0",
+    "bower": "^1.3.12",
+    "gulp-bower": "0.0.7"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Krekotun/fabium.git"
+  },
+  "keywords": [
+    "front-end",
+    "gulp",
+    "boilerplate"
+  ],
+  "author": "Krekotun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Krekotun/fabium/issues"
+  },
+  "homepage": "https://github.com/Krekotun/fabium"
+}
