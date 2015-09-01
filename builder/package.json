@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "front-end boilerplate for fast project start",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "gulp": "^3.8.11"
+  },
   "devDependencies": {
     "gulp": "*",
     "gulp-util": "*",
@@ -35,9 +37,5 @@
     "boilerplate"
   ],
   "author": "Krekotun",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Krekotun/fabium/issues"
-  },
-  "homepage": "https://github.com/Krekotun/fabium"
+  "license": "ISC"
 }
