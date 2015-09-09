@@ -22,14 +22,14 @@ define(['jquery', 'underscore', 'handlebars', 'backbone', './model.js'], functio
         crossDomain: true,
         type: 'POST',
         dataType: 'json',
-        url: '/built/customers.json',
+        url: './customers.json',
         success: (function(_this) {
           return function(response) {
             return _this.initCollection(response);
           };
         })(this),
         error: function(error) {
-          return console.log('Error');
+          return console.log('Error json file');
         }
       });
     };

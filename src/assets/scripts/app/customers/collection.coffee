@@ -28,11 +28,11 @@ define [
 				crossDomain: true
 				type: 'POST'
 				dataType: 'json'
-				url: '/built/customers.json'
+				url: './customers.json'
 				success: (response) =>
 					@initCollection(response)
 				error: (error) ->
-					console.log 'Error'
+					console.log 'Error json file'
 
 		initCollection: (response) ->
 			@collection.reset()
