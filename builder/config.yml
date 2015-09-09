@@ -8,13 +8,15 @@ paths:
       path: "../src/assets/styles"
 
     sprites:
-      images: 
+      images:
         all: "../src/assets/images/design/sprite/*"
         path: "../src/assets/images/design/sprite"
       style: "../src/assets/styles/common"
 
     scripts:
       all: "../src/assets/scripts/**/*.coffee"
+      json: "../src/assets/scripts/**/*.json"
+      html: "../src/assets/scripts/**/*.html"
 
     images:
       all: "../src/assets/images/**/*.*"
@@ -27,10 +29,10 @@ paths:
     templates:
       all: "../src/templates/**/*.jade"
       path: "../src/templates"
-      blocks: 
+      blocks:
         all: "../src/templates/blocks/**/*.jade"
         path: "../src/templates/blocks"
-      pages: 
+      pages:
         all: "../src/templates/pages/**/*.jade"
         path: "../src/templates/pages"
 
@@ -48,9 +50,9 @@ paths:
     images:
       all: "../built/assets/images/**/*.*"
       path: "../built/assets/images"
-      design: 
+      design:
         path: "../built/assets/images/design"
-      content: 
+      content:
         path: "../built/assets/images/content"
 
     libs:

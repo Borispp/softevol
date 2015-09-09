@@ -9,6 +9,7 @@ pngcrush = require 'imagemin-pngcrush'
 
 # gulp modules
 gulp = require 'gulp'
+bower = require 'gulp-bower'
 gulpLoadPlugins = require 'gulp-load-plugins'
 g = gulpLoadPlugins()
 
@@ -33,7 +34,8 @@ consoleErorr = (err) ->
 ##################################################################################
 
 gulp.task 'bower', ->
-    g.bower config.paths.built.libs
+  # bower().pipe(gulp.dest('../built/assets/libs/'))
+  bower().pipe(gulp.dest(config.paths.built.libs.path))
 
 # Генерация спрайтов
 gulp.task 'sprite', ->
@@ -64,6 +66,12 @@ gulp.task 'coffee', ->
         .pipe g.coffee
             bare: true
         .pipe gulp.dest config.paths.built.scripts.path
+
+gulp.task 'scripts', ->
+	gulp.src [config.paths.src.scripts.json, config.paths.src.scripts.html]
+		.pipe g.plumber
+			errorHandler: consoleErorr
+		.pipe gulp.dest config.paths.built.scripts.path
 
 # перенос скриптов из папки вендор в built
 gulp.task 'vendor', ->
@@ -151,7 +159,7 @@ gulp.task 'watch', ->
 ##################################################################################
 
 # Выполнение всех тасков
-gulp.task 'default', ['bower', 'sprite', 'stylus', 'coffee', 'images', 'jade']
+gulp.task 'default', ['bower', 'sprite', 'stylus', 'coffee', 'images', 'jade', 'scripts']
 
 # Dev таск для разработки с отслеживанием измнений файлов и компиляцией их на лету
 gulp.task 'dev', ['default', 'watch']
