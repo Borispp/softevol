@@ -1,7 +1,7 @@
 var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
-define(['jquery', 'underscore', 'handlebars', 'backbone', './view_item.js', 'text!./templates/form.html'], function($, _, Handlebars, Backbone, ViewItem, EditForm) {
+define(['jquery', 'underscore', 'handlebars', 'backbone', './view_item.js', 'text!app/customers/templates/form.html'], function($, _, Handlebars, Backbone, ViewItem, EditForm) {
   var View;
   return View = (function(superClass) {
     extend(View, superClass);
@@ -99,8 +99,8 @@ define(['jquery', 'underscore', 'handlebars', 'backbone', './view_item.js', 'tex
         return this.hideAddForm();
       } else {
         return $.each(model.validationError, function(item, msg) {
-          $form.find('input[name=' + item + '] + .m-error').html(msg);
-          return $form.find('input[name=' + item + '] + .m-error').removeClass('m-hide');
+          $('.form--edit_customers.new input[name=' + item + '] + .m-error').html(msg);
+          return $('.form--edit_customers.new input[name=' + item + '] + .m-error').removeClass('m-hide');
         });
       }
     };

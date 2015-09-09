@@ -1,4 +1,5 @@
 require.config
+  baseUrl: 'assets/scripts'
   paths:
     jquery:
       '../libs/jquery/dist/jquery.min'
@@ -24,5 +25,5 @@ require [
   'bootstrap'
 ], () ->
 
-require ['app/customers/customers'], (Customers) ->
+require ['./app/customers/base'], (Customers) ->
   return

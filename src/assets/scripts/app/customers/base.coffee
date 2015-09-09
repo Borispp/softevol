@@ -5,13 +5,13 @@ define [
 	'backbone'
 
 	#Models
-	'./model.js'
+	'assets/scripts/app/customers/model.js'
 
 	#View
-	'./view.js'
+	'assets/scripts/app/customers/view.js'
 
 	#Collection
-	'./collection.js'
+	'assets/scripts/app/customers/collection.js'
 
 
 ],

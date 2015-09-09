@@ -5,7 +5,7 @@ define [
 	'backbone'
 
 	# templates
-	'text!./templates/customer.html'
+	'text!app/customers/templates/customer.html'
 ],
 (
 	$

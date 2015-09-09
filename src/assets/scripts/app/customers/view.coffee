@@ -9,7 +9,7 @@ define [
 
 
 	# templates
-	'text!./templates/form.html'
+	'text!app/customers/templates/form.html'
 ],
 (
 	$
@@ -107,8 +107,8 @@ define [
 				@hideAddForm()
 			else
 				$.each model.validationError, (item, msg) ->
-					$form.find('input[name='+item+'] + .m-error').html(msg)
-					$form.find('input[name='+item+'] + .m-error').removeClass('m-hide')
+					$('.form--edit_customers.new input[name='+item+'] + .m-error').html(msg)
+					$('.form--edit_customers.new input[name='+item+'] + .m-error').removeClass('m-hide')
 
 		showCollection: ->
 			console.log @collection

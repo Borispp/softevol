@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'handlebars', 'backbone', './model.js', 'view.js', 'collection.js'], function($, _, Handlebars, Backbone, CustomerModel, CustomerView, CustomerCollection) {
+define(['jquery', 'underscore', 'handlebars', 'backbone', 'assets/scripts/app/customers/model.js', 'assets/scripts/app/customers/view.js', 'assets/scripts/app/customers/collection.js'], function($, _, Handlebars, Backbone, CustomerModel, CustomerView, CustomerCollection) {
   var Customers, customers;
   Customers = (function() {
     function Customers(options) {

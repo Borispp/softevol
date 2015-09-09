@@ -1,4 +1,5 @@
 require.config({
+  baseUrl: 'assets/scripts',
   paths: {
     jquery: '../libs/jquery/dist/jquery.min',
     underscore: '../libs/underscore/underscore-min',
@@ -17,4 +18,4 @@ require.config({
 
 require(['jquery', 'bootstrap'], function() {});
 
-require(['app/customers/customers'], function(Customers) {});
+require(['./app/customers/base'], function(Customers) {});
