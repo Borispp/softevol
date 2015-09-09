@@ -1,0 +1,23 @@
+<div class="customer {{cid}}" data-id="{{customer.id}}">
+  <p class="customer--controls">
+    <button type="button" class="btn btn-success customer--save glyphicon glyphicon-ok"
+            aria-label="Left Align"
+            data-id="{{customer.id}}" data-cid="{{cid}}">
+    </button>
+    <button type="button" class="btn btn-warning customer--edit glyphicon glyphicon-edit"
+            aria-label="Left Align"
+            data-id="{{customer.id}}" data-cid="{{cid}}">
+    </button>
+    <button type="button" class="btn btn-danger customer--remove glyphicon glyphicon-remove"
+            aria-label="Left Align"
+            data-id="{{customer.id}}" data-cid="{{cid}}">
+    </button>
+  </p>
+  <div class="customer--item">
+    <p><strong>Name: </strong> <span class="customerName">{{customer.customerName}}</span></p>
+    <p><strong>Email: </strong> <span class="customerEmail">{{customer.customerEmail}}</span></p>
+    <p><strong>Phone: </strong> <span class="customerPhone">{{customer.customerPhone}}</span></p>
+    <p><strong>Address: </strong> <span class="customerAddress">{{customer.customerAddress}}</span></p>
+    <p><strong>Zip: </strong> <span class="customerZip">{{customer.customerZip}}</span></p>
+  </div>
+</div>

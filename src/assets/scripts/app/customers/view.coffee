@@ -5,7 +5,7 @@ define [
 	'backbone'
 
 	#ViewItem
-	'/built/assets/scripts/app/customers/view_item.js'
+	'./view_item.js'
 
 
 	# templates

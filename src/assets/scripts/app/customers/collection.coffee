@@ -5,7 +5,7 @@ define [
 	'backbone'
 
 	#Models
-	'/built/assets/scripts/app/customers/model.js'
+	'./model.js'
 
 ],
 (

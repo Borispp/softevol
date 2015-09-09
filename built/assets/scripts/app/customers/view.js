@@ -1,7 +1,7 @@
 var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
-define(['jquery', 'underscore', 'handlebars', 'backbone', '/built/assets/scripts/app/customers/view_item.js', 'text!./templates/form.html'], function($, _, Handlebars, Backbone, ViewItem, EditForm) {
+define(['jquery', 'underscore', 'handlebars', 'backbone', './view_item.js', 'text!./templates/form.html'], function($, _, Handlebars, Backbone, ViewItem, EditForm) {
   var View;
   return View = (function(superClass) {
     extend(View, superClass);
