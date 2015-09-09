@@ -1,63 +1,28 @@
-$('.fake-select').select2({
-     minimumResultsForSearch: -1
-})
-$('#logo').on 'click', (e) ->
-  e.preventDefault()
+require.config
+  paths:
+    jquery:
+      '../libs/jquery/dist/jquery.min'
+    underscore:
+      '../libs/underscore/underscore-min'
+    backbone:
+      '../libs/backbone/backbone-min'
+    validation:
+      '../libs/backbone.validation/dist/backbone-validation-min'
+    'bootstrap':
+      '../libs/bootstrap/dist/js/bootstrap.min'
+    handlebars:
+      '../libs/handlebars/handlebars.min'
+    text:
+      '../libs/requirejs-plugins/lib/text'
 
-class Popup
-  constructor: (@$open, @$overlay) ->
-    @$popups = $('.popup')
-    @$close = $('.popup--close')
-    @$popup = '#'+@$open.attr('data-open')
+  shim:
+    'bootstrap':
+      deps: ['jquery']
 
-    @init()
-  init: ->
-    @$open.on 'click', (e) =>
-      e.preventDefault()
-      @openPopup()
-    @$close.on 'click', (e) =>
-      e.preventDefault()
-      @closePopup()
-    @$overlay.on 'click', (e) =>
-      e.preventDefault()
-      @closePopup()
+require [
+  'jquery'
+  'bootstrap'
+], () ->
 
-  openPopup: ->
-    @$popups.removeClass('m-show_popup')
-    $(@$popup).addClass('m-show_popup')
-    @$overlay.removeClass('m-hide');
-
-  closePopup: ->
-    $(@$popup).removeClass('m-show_popup')
-    @$overlay.addClass('m-hide');
-
-$.each($('.popup_open'), (item, el)->
-  $el = $(el)
-  $overlay = $('.m-overlay')
-  new Popup($el, $overlay)
-)
-
-
-$("#windows_type").on('change', ->
-  $("#windowsDownload").attr('href', $(@).val());
-)
-$("#contactus_send").on('click', (e) ->
-  e.preventDefault()
-  if($('#your_name').val() != '' && $('#your_email').val() != '' && $('#your_subject').val() != '' && $('#your_message').val() != '')
-    $("#contactus").submit()
-  else
-    console.log 'Fields should not be empty'
-
-)
-# $('.m-overlay, .popup--close').on 'click', (e) ->
-#   e.preventDefault()
-#   $('.m-overlay').addClass('m-hide');
-#   $('.popup').addClass('m-hide');
-#   $('.popup').removeClass('m-show_popup');
-#
-# $('.popup_open').on 'click', (e) ->
-#   e.preventDefault()
-#   attr = $(this).attr('data-open')
-#   $('.m-overlay').removeClass('m-hide');
-#   $('#'+attr).removeClass('m-hide');
-#   $('#'+attr).addClass('m-show_popup');
+require ['app/customers/customers'], (Customers) ->
+  return

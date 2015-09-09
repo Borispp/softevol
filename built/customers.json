@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "customerName": "Boris",
+        "customerEmail": "borisss777@gmail.com",
+        "customerPhone": "+37369577457",
+        "customerAddress": "Moldova, Chisinau",
+        "customerZip": "2043"
+    },
+    {
+        "id": 2,
+        "customerName": "Alex",
+        "customerEmail": "alex@gmail.com",
+        "customerPhone": "+37360366266",
+        "customerAddress": "Moldova, Chisinau",
+        "customerZip": "2044"
+    }
+]

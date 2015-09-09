@@ -1,13 +1,103 @@
-#wrapper
-  background: #dfe4e8 url("../images/content/light.png");
-  background-position: center center;
-  background-repeat: no-repeat, repeat;
-  min-height 100%
+.wrapper
+  max-width 1200px
   margin 0 auto
-  shadow(0 0 6px rgba(0, 0, 0, 0.5))
-  position relative
 
-.m-hide
-  display none
-.m-show
+  .m-gray
+    color #999
+.customers
+  footer
+    margin-bottom 12px
+  &.showAddForm
+    footer
+      display none
+  .customers_list
+    margin 12px 0
+
+    .customer
+      border-bottom 1px solid #eee
+      position relative
+      padding 12px 0
+      font-size 16px
+
+      &--item
+        color #444
+        strong
+          font-weight bold
+          width 85px
+          display inline-block
+          color #000
+
+        p
+          padding 12px 0
+          box-sizing border-box
+
+      .customer--controls
+        width auto
+        position absolute
+        right 0
+        top 14px
+
+        .customer--save
+          display none
+
+      &.customer_edit .customer--item, &.customer_edit .customer--edit
+        display none
+
+      &.customer_edit .customer--controls .customer--save
+        display inline-block
+
+#customer_form
+  p
+    padding 3px 0
+    label
+      font-weight bold
+      width 76px
+      display inline-block
+      color #000
+    input
+      max-width 300px
+      display inline-block
+      font-size 16px
+  .customer--save
+    margin-left 80px
+
+.m-error
   display block
+  width 200px
+  background #f04713
+  padding 3px 8px
+  color #fff
+  font-size 12px
+  position relative
+  top -1px
+  left 86px
+  border-bottom-right-radius 4px
+  border-bottom-left-radius 4px
+
+  &:before
+    content ''
+    width 0
+    height 0
+    border-left 5px solid transparent
+    border-right 5px solid transparent
+    border-bottom 5px solid #f04713
+    position absolute
+    left 8px
+    top -4px
+
+  &.m-hide
+    display none
+
+@media (max-width: 520px)
+  .customers .customers_list .customer
+    font-size 14px
+  #customer_form
+    width calc(100% - 50px)
+    p
+      padding 2px 0
+      input
+        width 220px
+        font-size 14px
+  .customer .customer--controls .btn
+    display block
+    margin-bottom 4px

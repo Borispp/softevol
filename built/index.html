@@ -1,207 +1,26 @@
-<?php
-  include('./boot/get_version.php');
-?>
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>UT</title>
-
-        <link rel="icon" href="assets/images/content/favicon.gif" type="image/x-icon">
-        <link rel="shortcut icon" href="assets/images/content/favicon.gif" type="image/x-icon">
-        <link href="assets/libs/select2/dist/css/select2.min.css" rel="stylesheet" />
-      	<link type="text/css" rel="stylesheet" href="assets/libs/bxslider/jquery.bxslider.css"/>
-        <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
-
-    </head>
-    <body>
-    <div id="wrapper">
-      <header id="header">
-        <div id="header--logo">
-          <a href="#" id="logo"><img src="./assets/images/content/logo.png" alt=""></a>
-        </div>
-        <div class="info">
-          <p class="info--headline">Utopia is peer to peer <i></i> network MESSENGER </p>
-          <p class="info--desc">created for you to <span>minimize risk</span><i></i> and <span>protect</span> your communication</p>
-        </div>
-        <div class="download">
-          <h2>DOWNLOAD FOR:</h2>
-          <a href="#" class="download--windows popup_open" data-open="get_windows">Windows</a>
-          <a href="#" class="download--mac popup_open" data-open="get_mac">Mac</a>
-          <a href="#" class="download--linux popup_open" data-open="get_linux">Linux</a>
-        </div>
-      </header>
-
-      <div id="content">
-        <div class="slider">
-          <ul id="bxslider">
-  					<li>
-  						<div class="bxslider-info first-item">
-  							<h2>Do you feel comfortable <br> <span class="m-big">about <span class="m-red">Big Brother</span></span> <br>still <span class="m-red">watching</span> on you ?</h2>
-
-                <p class="m-headline_promol"><span>Stop unsolicited</span></p><br>
-                <p class="m-headline_promor"><span>surveillance!</span></p>
-                <p class="button"><button class="btn m-big m-wide popup_open" id="getUtopia" data-open="<?php if($os == 'Mac') { echo 'get_mac'; } elseif ($os == 'Windows') { echo 'get_windows'; } elseif ($os == 'Linux') { echo 'get_linux'; } ?>">Try Utopia now!</button</p>
-  						</div>
-  					</li>
-
-  					<!-- <li>
-  					  <div class="bxslider-info">
-  					                <h2 class="headline_promo">Features <span class="m-new_small">of Utopia  Messenger</span></h2>
-  					                <div class="secure_list">
-  					                  <p class="secure_list--chat">The Utopia Messenger uses principles of instant data transmission.</p>
-  					                  <p class="secure_list--connection">No one can identify user’s location or IP address under any circumstances.</p>
-  					                  <p class="secure_list--email">Every network peer is used in data retransmission during all message deliveries. Nobody can see the package content except the recipient.</p>
-  					                  <p class="secure_list--general">The messages transmission is free from censorship and makes your communication freedom not available for disruption.</p>
-  					                  <p class="secure_list--bell">The Utopia Messenger is created to resist to current or future communication disruption. </p>
-  					                  <p class="secure_list--gl">The messages transmission doesn't use any server. The Utopia Messenger transmission network is self sufficient and it needn’t any resources except <br> the people using it.</p>
-  					                </div>
-  					  </div>
-  					</li> -->
-
-            <li>
-  						<div class="bxslider-info">
-                <h2 class="headline_promo">Features <span class="m-new_small">of Utopia  Messenger</span></h2>
-                <div class="secure_list">
-                  <p class="secure_list--data">Uses principles of instant data transmission.</p>
-                  <p class="secure_list--hidden_data">Keeps User Data Hidden - no one can determine the Location or IP address of the user.</p>
-                  <p class="secure_list--resist">Highly resistant to any threats and vulnerabilities.</p>
-                  <p class="secure_list--wall">Communication is free from censorship and is very responsive to any threat related to your freedom of communication.</p>
-                  <p class="secure_list--newtwork">Every user participates in delivery of messages. No one gets the access to the contents of the packets inside the network except for the receiver. </p>
-                  <p class="secure_list--network_prive"> Servers are not involved in data transmission. The network is self-sufficient by itself and is run by people who use it.</p>
-                </div>
-  						</div>
-  					</li>
-  					<li>
-  						<div class="bxslider-info">
-                <img src="./assets/images/content/slide2.png" alt="">
-  							<h2>Looking for seamless <br> and secure communication?</h2>
-  							<p class="info--description">Utopia is innovational and highly secured Network Messenger. Utopia incorporates principles of instantaneous delivery and superior encryption, making its Peer-to-Peer Network highly reliable, efficient and secure. Added functionality and user-friendly interface make messaging feel seamless and enjoyable.  </p>
-                <p class="info--description">Choose Utopia - you would never have to think about secure communication twice again.</p>
-  						</div>
-  					</li>
-  					<li>
-  						<div class="bxslider-info">
-                <img src="./assets/images/content/slide3.png" alt="">
-                  <h2>Utopia protects your Privacy and Data</h2>
-                  <p class="info--description">Utopia`s network is very protective against censorship and very responsive to any threats related to privacy and security of users data. How does it work? Every user participates in delivery of messages, but no one gets access to the contents of the packets inside the network except for the receiver. This makes it absolutely impossible to determine the Location/IP address of the person using this cross-platform application, making communication more private and secure.</p>
-  						    <p class="info--description">Feel confident about your privacy - we keep it protected.</p>
-              </div>
-  					</li>
-  					<li>
-  						<div class="bxslider-info">
-                <img src="./assets/images/content/slide5.png" alt="">
-                  <h2>Advanced Cryptographic Technologies</h2>
-                  <p class="info--description">Utopia implements Elliptic Curve Cryptography – one of the most advanced technologies currently available to make sure that data is safely transmitted and stored. Use it for secure text messaging, file sharing, e-mail and more. Forget about spying. Forget about government control. From now on sniffing and spoofing are in the past. </p>
-                  <p class="button" style="margin-top: 18px"><button class="btn m-big m-wide popup_open" data-open="get_mac">Feel the power of Utopia!</button</p>
-  						</div>
-  					</li>
-  				</ul>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Softevol</title>
+  <link href="assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 customers">
+          <div class="customers_list">
+          </div>
+          <footer>
+            <button type="button" class="btn btn-success customer--add">Add New Customer</button>
+            <button type="button" class="btn btn-success customers--save">Save</button> <span class="m-gray">(show current collection in console.log)</span>
+          </footer>
         </div>
       </div>
     </div>
-    <footer id="footer">
-      <p class="footer--copy">©2015. Utopia messenger.</p>
-      <p class="footer--contact"><button class="btn popup_open m-wide_l" data-open="send_suggestions">Contact us</button></p>
-    </footer>
-
-    <div class="m-overlay m-hide"></div>
-    <div class="popup" id="send_suggestions">
-      <a href="" class="popup--close"></a>
-      <h2>You can submit your questions or comments simply  by filling out the form below:</h2>
-      <form action="boot/send.php" method="POST" id="contactus">
-        <p>
-          <label for="your_name">Your name</label>
-          <input type="text" placeholder="ex. John Smith" id="your_name" name="your_name">
-        </p>
-        <p>
-          <label for="your_email">Your e-mail</label>
-          <input type="email" placeholder="ex. johnsmith@yahoo.com" id="your_email" name="your_email">
-        </p>
-        <p class="select--send_width">
-          <label for="your_subject">Subject</label>
-          <select name="your_subject" id="your_subject" placeholder="Select subject" class="fake-select">
-            <option value="" disabled selected>Select subject</option>
-            <option value="Default">Default</option>
-          </select>
-        </p>
-        <p>
-          <label for="your_message">Your message</label>
-          <textarea name="your_message" id="your_message" placeholder="Maximum 550 symbols..."></textarea>
-        </p>
-        <p style="margin-left: 125px; text-align: left;"><a href="#" class="btn m-wide" id="contactus_send">Send</a></p>
-      </form>
-    </div>
-
-    <div class="popup" id="get_mac">
-      <a href="" class="popup--close"></a>
-      <h2 class="get--headline">Feel the Freedom <br> of Communication with Utopia! </h2>
-      <div class="download_block">
-        <span class="utopia--os m-mac">Utopia for Mac</span>
-        <a href="downloads/macos/Utopia_<?php echo $macosInstallers[0][0].'.'.$macosInstallers[0][1] ?>" class="btn m-wide_xl m-fz18">Download</a>
-      </div>
-        <h3 class="download_block--other">Other platforms:</h3>
-        <a href="#" class="utopia--os_sub m-linux popup_open" data-open="get_linux">Linux</a>
-        <a href="#" class="utopia--os_sub m-windows popup_open" data-open="get_windows">Windows</a>
-    </div>
-
-    <div class="popup" id="get_windows">
-      <a href="" class="popup--close"></a>
-      <h2 class="get--headline">Feel the Freedom <br> of Communication with Utopia! </h2>
-      <div class="download_block">
-        <span class="utopia--os m-windows">Utopia for Windows</span>
-
-        <p class="select--send_width_xl">
-          <select name="windows_type" id="windows_type" placeholder="Select OS" class="fake-select">
-              <option value="downloads/windows/classic/86/UtopiaX86_<?php echo $windowsClassicInstallers86[0][0].'.'.$windowsClassicInstallers86[0][1]; ?>">Classic x86</option>
-            <option value="downloads/windows/classic/64/UtopiaX64_<?php echo $windowsClassicInstallers64[0][0].'.'.$windowsClassicInstallers64[0][1]; ?>">Classic x64</option>
-            <option value="downloads/windows/portable/86/UtopiaPortableX86_<?php echo $windowsPortableInstallers86[0][0].'.'.$windowsPortableInstallers86[0][1]; ?>">Portable x86</option>
-            <option value="downloads/windows/portable/64/UtopiaPortableX64_<?php echo $windowsPortableInstallers64[0][0].'.'.$windowsPortableInstallers64[0][1]; ?>">Portable x64</option>
-          </select>
-        </p>
-        <a id="windowsDownload" href="downloads/windows/classic/86/UtopiaX86_<?php echo $windowsClassicInstallers86[0][0].'.'.$windowsClassicInstallers86[0][1]; ?>" class="btn m-wide_xl m-fz18">Download</a>
-      </div>
-      <h3 class="download_block--other">Other platforms:</h3>
-      <a href="#" class="utopia--os_sub m-linux popup_open" data-open="get_linux">Linux</a>
-      <a href="#" class="utopia--os_sub m-mac popup_open" data-open="get_mac">Mac</a>
-    </div>
-
-    <div class="popup" id="get_linux">
-      <a href="" class="popup--close"></a>
-      <h2 class="get--headline">Feel the Freedom <br> of Communication with Utopia! </h2>
-      <div class="download_block">
-        <span class="utopia--os m-linux">Utopia for Linux</span>
-        <a href="downloads/linux/Utopia_<?php echo $linuxInstallers[0][0].'.'.$linuxInstallers[0][1]; ?>" class="btn m-wide_xl m-fz18">Download</a>
-
-      </div>
-      <h3 class="download_block--other">Other platforms:</h3>
-      <a href="#" class="utopia--os_sub m-mac popup_open" data-open="get_mac">Mac</a>
-      <a href="#" class="utopia--os_sub m-windows popup_open" data-open="get_windows">Windows</a>
-    </div>
-
-    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="assets/libs/bxslider/jquery.bxslider.min.js"></script>
-    <script src="assets/libs/select2/dist/js/select2.min.js"></script>
-    <script src="assets/scripts/main.js"></script>
-    <script language="JavaScript">
-
-      var slider = $('#bxslider').bxSlider({
-        infiniteLoop: false,
-        hideControlOnEnd: true,
-        pager: true,
-        onSlideBefore: function(currentSlide, totalSlides, currentSlideHtmlObject){
-		      if (currentSlideHtmlObject == '0') {
-            $('.slider').removeClass('m-opacity');
-          } else {
-            $('.slider').addClass('m-opacity');
-          }
-		    }
-      });
-
-      $('#logo').on('click', function () {
-        slider.goToSlide(0);
-      });
-  	</script>
-    </body>
+  </div>
+  <script data-main="assets/scripts/main.js" src="assets/libs/requirejs-plugins/lib/require.js"></script>
+</body>
 </html>
