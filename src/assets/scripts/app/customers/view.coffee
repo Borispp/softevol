@@ -9,7 +9,7 @@ define [
 
 
 	# templates
-	'text!./form.html'
+	'text!./templates/form.html'
 ],
 (
 	$
